@@ -1,0 +1,11 @@
+[[combo]]
+keys = ["L4", "L3"] # Unordered list of key::SteamDeckKey
+launch = "hyprlock" # A command to launch
+
+[[mapping]]
+from = "L1" # key::SteamDeckKey
+to = ["KEY_LEFTMETA", "KEY_LEFTBRACE"] # ordered list of evdev::Key
+
+[[mapping]]
+from = "R1" # key::SteamDeckKey
+to = ["KEY_LEFTMETA", "KEY_RIGHTBRACE"] # ordered list of evdev::Key

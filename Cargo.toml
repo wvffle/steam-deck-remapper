@@ -1,0 +1,15 @@
+[package]
+name = "steam-deck-remapper"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+color-eyre = "0.6.3"
+dirs = "5.0.1"
+enum-map = "2.7.3"
+evdev = { version = "0.12.1", features = ["tokio", "serde"] }
+serde = { version = "1.0.199", features = ["derive"] }
+tokio = { version = "1.37.0", features = ["full"] }
+toml = "0.8.12"
