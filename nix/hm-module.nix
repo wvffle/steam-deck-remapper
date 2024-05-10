@@ -42,7 +42,10 @@ in {
         ExecStart = "${cfg.package}/bin/steam-deck-remapper";
       };
 
-      Install.WantedBy = ["graphical-session.target"];
+      Install.WantedBy = [
+        (lib.mkIf config.wayland.windowManager.hyprland.systemd.enable "hyprland-session.target")
+        (lib.mkIf config.wayland.windowManager.sway.systemd.enable "sway-session.target")
+      ];
     };
     
     xdg.configFile."steam-deck-remapper/config.toml".source = format.generate "config.toml" cfg.settings;

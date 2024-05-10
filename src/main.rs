@@ -10,7 +10,7 @@ use std::{convert::Infallible, fs};
 use config::Config;
 use enum_map::{enum_map, EnumMap};
 use evdev::{uinput::{VirtualDevice, VirtualDeviceBuilder}, AbsoluteAxisType, AttributeSet, EventStream, EventType, InputEvent, InputEventKind, RelativeAxisType};
-use color_eyre::{eyre::OptionExt, owo_colors::OwoColorize, Result};
+use color_eyre::{eyre::OptionExt, Result};
 
 use key::SteamDeckKey;
 use axis::Axis;
